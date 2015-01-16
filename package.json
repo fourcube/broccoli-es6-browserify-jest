@@ -1,0 +1,28 @@
+{
+  "name": "broccoli-es6-browserify-jest",
+  "version": "1.0.0",
+  "description": "Template for a broccoli driven, es6 supporting, browserify bundling build. Runs tests with jest.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd node_modules/mout && npm install && node build cjs .; exit 0",
+    "test": "rm -r build; BROCCOLI_ENV=development broccoli build out && jest"
+  },
+  "jest": {
+    "testDirectoryName": "out/tests",
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/mout"]
+  },
+  "author": "Chris Grieger",
+  "license": "MIT",
+  "devDependencies": {
+    "broccoli": "^0.13.3",
+    "broccoli-6to5-transpiler": "^2.0.4",
+    "broccoli-env": "0.0.1",
+    "broccoli-fast-browserify": "^0.2.4",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-static-compiler": "^0.2.1",
+    "jest-cli": "^0.2.1"
+  },
+  "dependencies": {
+    "mout": "fourcube/mout"
+  }
+}
