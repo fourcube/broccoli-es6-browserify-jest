@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "cd node_modules/mout && npm install && node build cjs .; exit 0",
-    "test": "rm -r build; BROCCOLI_ENV=development broccoli build out && jest"
+    "test": "rm -r out; BROCCOLI_ENV=development broccoli build out && jest"
   },
   "jest": {
     "testDirectoryName": "out/tests",
