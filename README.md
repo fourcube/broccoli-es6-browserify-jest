@@ -4,8 +4,9 @@ Uses
 
 - broccoli (building)
   - browserify (modules)
-  - 6to5 (es6 to es5)
+  - babel (es6 to es5)
 - jest (testing)
+- react
 
 ## Initialization
 
