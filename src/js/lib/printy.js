@@ -1,7 +1,8 @@
+// jshint esnext:true
 module.exports = {
   print () {
     var recipient = 'world';
-    var stripMargin = require('mout/string/stripMargin');
+    var stripMargin = require('./stripMargin');
 
     var message = stripMargin(`Hello,
       |${recipient}.
@@ -12,4 +13,4 @@ module.exports = {
   sum (a, b) {
     return a + b;
   }
-}
+};

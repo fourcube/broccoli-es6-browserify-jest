@@ -9,20 +9,19 @@
   },
   "jest": {
     "testDirectoryName": "out/tests",
-    "unmockedModulePathPatterns": ["<rootDir>/node_modules/mout"]
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/mout"
+    ]
   },
   "author": "Chris Grieger",
   "license": "MIT",
   "devDependencies": {
     "broccoli": "^0.13.3",
-    "broccoli-6to5-transpiler": "^2.0.4",
+    "broccoli-babel-transpiler": "^4.0.1",
     "broccoli-env": "0.0.1",
-    "broccoli-fast-browserify": "^0.2.4",
+    "broccoli-fast-browserify": "^0.2.5",
     "broccoli-merge-trees": "^0.2.1",
     "broccoli-static-compiler": "^0.2.1",
-    "jest-cli": "^0.2.1"
-  },
-  "dependencies": {
-    "mout": "fourcube/mout"
+    "jest-cli": "^0.4.0"
   }
 }

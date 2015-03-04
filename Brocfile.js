@@ -1,7 +1,7 @@
 var mergeTrees  = require('broccoli-merge-trees'),
   pickFiles   = require('broccoli-static-compiler'),
   fastBrowserify = require('broccoli-fast-browserify'),
-  esTranspiler = require('broccoli-6to5-transpiler'),
+  esTranspiler = require('broccoli-babel-transpiler'),
   env = require('broccoli-env').getEnv(),
   app = 'src',
   appCss,
