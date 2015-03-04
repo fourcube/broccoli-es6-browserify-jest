@@ -8,10 +8,7 @@
     "test": "rm -r out; BROCCOLI_ENV=development broccoli build out && jest"
   },
   "jest": {
-    "testDirectoryName": "out/tests",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/mout"
-    ]
+    "testDirectoryName": "out/tests"
   },
   "author": "Chris Grieger",
   "license": "MIT",

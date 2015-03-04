@@ -1,18 +1,21 @@
+// jshint esnext:true
 describe('String', () => {
   describe('stripMargin', () => {
-    it('should remove leading characters of a string up until |', () => {
-      var stripMargin = require('mout/string/stripMargin');
+    jest.dontMock('../lib/stripMargin');
 
-      expect(stripMargin('   |foo','|')).toBe('foo');
+    it('should remove leading characters of a string up until |', () => {
+      var stripMargin = require('../lib/stripMargin');
+
+      expect(stripMargin('   |foo')).toBe('foo');
     });
 
     it('should remove leading characters of a multi-line string up until |', () => {
-      var stripMargin = require('mout/string/stripMargin');
+      var stripMargin = require('../lib/stripMargin');
       var subject = `foo
         |noob
         |bar`;
 
-      expect(stripMargin(subject, '|')).toBe('foo\nnoob\nbar');
+      expect(stripMargin(subject)).toBe('foo\nnoob\nbar');
     });
   });
 });
