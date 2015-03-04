@@ -1,14 +1,15 @@
 // jshint esnext:true
-module.exports = {
+import stripMargin from './stripMargin';
+
+export default {
   print () {
     var recipient = 'world';
-    var stripMargin = require('./stripMargin');
 
     var message = stripMargin(`Hello,
       |${recipient}.
       |<3!`);
 
-    console.log(message);
+    return message;
   },
   sum (a, b) {
     return a + b;

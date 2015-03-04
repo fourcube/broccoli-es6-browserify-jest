@@ -18,7 +18,11 @@
     "broccoli-env": "0.0.1",
     "broccoli-fast-browserify": "^0.2.5",
     "broccoli-merge-trees": "^0.2.1",
+    "broccoli-react": "^0.7.0",
     "broccoli-static-compiler": "^0.2.1",
     "jest-cli": "^0.4.0"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
   }
 }

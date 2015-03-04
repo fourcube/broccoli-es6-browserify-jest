@@ -2,6 +2,7 @@ var mergeTrees  = require('broccoli-merge-trees'),
   pickFiles   = require('broccoli-static-compiler'),
   fastBrowserify = require('broccoli-fast-browserify'),
   esTranspiler = require('broccoli-babel-transpiler'),
+  reactify = require('broccoli-react'),
   env = require('broccoli-env').getEnv(),
   app = 'src',
   appCss,
@@ -30,8 +31,11 @@ appTests = pickFiles('tests', {
   destDir: '/tests'
 });
 
-transpiled = esTranspiler(appJs, {
-  sourceMap: false
+jsxTransformed = reactify(appJs, {extensions: [".js"], transform: {sourceMap: true}});
+
+transpiled = esTranspiler(jsxTransformed, {
+  sourceMap: 'inline',
+  modules: 'common'
 });
 
 browserified = fastBrowserify(transpiled, {
