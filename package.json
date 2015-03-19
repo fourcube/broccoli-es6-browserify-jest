@@ -4,7 +4,6 @@
   "description": "Template for a broccoli driven, es6 supporting, browserify bundling build. Runs tests with jest.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cd node_modules/mout && npm install && node build cjs .; exit 0",
     "test": "rm -r out; BROCCOLI_ENV=development broccoli build out && jest"
   },
   "jest": {
@@ -13,16 +12,16 @@
   "author": "Chris Grieger",
   "license": "MIT",
   "devDependencies": {
-    "broccoli": "^0.13.3",
+    "broccoli": "^0.15.0",
     "broccoli-babel-transpiler": "^4.0.1",
     "broccoli-env": "0.0.1",
     "broccoli-fast-browserify": "^0.2.5",
     "broccoli-merge-trees": "^0.2.1",
-    "broccoli-react": "^0.7.0",
+    "broccoli-react": "^0.7.1",
     "broccoli-static-compiler": "^0.2.1",
     "jest-cli": "^0.4.0"
   },
   "dependencies": {
-    "react": "^0.12.2"
+    "react": "^0.13.1"
   }
 }
